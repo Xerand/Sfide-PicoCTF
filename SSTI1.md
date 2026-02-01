@@ -19,6 +19,7 @@ Si tratta di **Server-Side Template Injection (SSTI)**.
 - Dalla lista, cerchiamo classi come: `subprocess.Popen` → per eseguire comandi shell.
 
 Per trovare l'indice della classe lo abbiamo chiesto a ChatGPT inserendo il lungo elenco di classi restituito con il precedente comando `{{ ''.__class__.__mro__[1].__subclasses__() }}`
+Ci ha restituito 356
 ### **5. Esecuzione di comandi**
 
 - Con `Popen`, abbiamo eseguito `ls -la` per esplorare il filesystem:
